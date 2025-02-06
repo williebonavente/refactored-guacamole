@@ -4,6 +4,7 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\FacultyController;
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [
@@ -30,3 +31,10 @@ Route::post('/students', [StudentController::class, 'store'])->name('students.st
 Route::get('/students/{student}/edit', [StudentController::class, 'edit'])->name('students.edit');
 Route::put('/students/{student}', [StudentController::class, 'update'])->name('students.update');
 Route::delete('/students/{student}', [StudentController::class, 'destroy'])->name('students.destroy');
+
+// Faculty routes
+Route::get('/faculty', [FacultyController::class, 'index'])->name('faculty.index');
+Route::get('/faculty/create', [FacultyController::class, 'create'])->name('faculty.create');
+Route::post('/faculty', [FacultyController::class, 'store'])->name('faculty.store');
+Route::get('/faculty/{faculty}/edit', [FacultyController::class, 'edit'])->name('faculty.edit');
+Route::put('/faculty/{faculty}', [FacultyController::class, 'update'])->name('faculty.update');
