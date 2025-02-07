@@ -44,6 +44,7 @@
                     <div class="flex justify-between items-center">
                         <div>
                             <p class="text-lg font-semibold text-gray-700">{{ $member->name }}</p>
+                            <p class="text-sm text-gray-500">{{ $member->age}}</p>
                             <p class="text-sm text-gray-500">{{ $member->email }}</p>
                             <p class="text-sm text-gray-500">Department: {{ $member->department }}</p>
                         </div>

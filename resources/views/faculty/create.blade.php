@@ -24,6 +24,12 @@
                 <label for="name" class="block text-gray-700">Name</label>
                 <input type="text" name="name" id="name" class="w-full p-2 border rounded" required>
             </div>
+            {{-- Error Prone Area --}}
+            <div class="mb-4">
+                <label for="phone" class="block text-gray-700">Age</label>
+                <input type="text" name="age" id="age" class="w-full p-2 border rounded" required>
+            </div>
+
             <div class="mb-4">
                 <label for="email" class="block text-gray-700">Email</label>
                 <input type="email" name="email" id="email" class="w-full p-2 border rounded" required>

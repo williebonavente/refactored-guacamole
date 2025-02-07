@@ -25,12 +25,14 @@ class FacultyController extends Controller
     {
         $request->validate([
             'name' => 'required',
+            'age' => 'required|integer',
             'email' => 'required|email|unique:faculty',
             'department' => 'required',
         ]);
 
         DB::table('faculty')->insert([
             'name' => $request->name,
+            'age' => $request->age,
             'email' => $request->email,
             'department' => $request->department,
             'created_at' => now(),

@@ -38,3 +38,4 @@ Route::get('/faculty/create', [FacultyController::class, 'create'])->name('facul
 Route::post('/faculty', [FacultyController::class, 'store'])->name('faculty.store');
 Route::get('/faculty/{faculty}/edit', [FacultyController::class, 'edit'])->name('faculty.edit');
 Route::put('/faculty/{faculty}', [FacultyController::class, 'update'])->name('faculty.update');
+Route::delete('/faculty/{faculty}', [FacultyController::class, 'destroy'])->name('faculty.destroy');
