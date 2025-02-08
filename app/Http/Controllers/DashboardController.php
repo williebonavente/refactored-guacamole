@@ -11,7 +11,7 @@ class DashboardController extends Controller
     public function index()
     {
         $totalStudents = Student::count();
-        $totalStudents = Faculty::count();
+        $totalFaculty = Faculty::count();
 
         return view('dashboard.index', compact('totalStudents', 'totalFaculty'));
     }
